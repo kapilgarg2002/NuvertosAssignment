@@ -19,7 +19,8 @@ module.exports = {
             name: row.CompoundName,
             desc: row.CompounrDescription,
             image: row.strImageSource,
-            updatedAt:  new Date(row.dateModified)
+            updatedAt:  new Date(row.dateModified),
+            createdAt:  new Date(row.dateModified)
           });
         })
         .on('end', () => {
