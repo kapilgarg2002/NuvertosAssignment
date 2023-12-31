@@ -1,0 +1,20 @@
+<div class="container-fluid container ">
+
+    <div class="row">
+        <div class="col-4">
+            <app-card [compound]="compound"></app-card>
+        </div>
+        <div class="col-7">
+            <div>
+                <p>{{compound.desc}}</p>
+            </div>
+            <div class="mt-5">
+                <button data-bs-toggle="modal" data-bs-target="#delcomp" class="btn btn-danger ">Delete</button>
+                <div data-bs-toggle="modal" data-bs-target="#editcomp"  class="btn btn-primary ">Update</div>
+            </div>
+            <app-del-modal (close)="closeDelModalFunc()"></app-del-modal>
+            <app-edit-modal [compound]="compound" ></app-edit-modal>
+        </div>
+    </div>
+    
+</div>

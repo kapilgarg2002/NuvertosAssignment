@@ -1,0 +1,41 @@
+<div class="modal fade" id="editcomp" tabindex="-1" aria-labelledby="editModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title" id="editModalLabel">Edit Component</h5>
+         <button (click)="cancel()"  type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          
+        </div>
+        <form>
+        <div class="modal-body">
+          
+            <div class="row mb-3">
+              <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Name</label>
+              <div class="col-sm-10">
+                <input type="text" [(ngModel)]="compound.name" name="name" class="form-control form-control-sm" id="colFormLabelSm" placeholder="name of the component">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Image</label>
+              <div class="col-sm-10">
+                <input type="text" [(ngModel)]="compound.image" name="image" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Image URL">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Description</label>
+              <div class="col-sm-10">
+                <input type="text" [(ngModel)]="compound.desc" name="desc" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Description of the component">
+              </div>
+            </div>
+          
+        </div>
+        <div class="modal-footer ">
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+          <button (click)="cancel()" type="button" class="btn btn-danger">cancel</button>
+          <button (click)="saveChangesFunc()" type="button" class="btn btn-dark">Update</button>
+
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>

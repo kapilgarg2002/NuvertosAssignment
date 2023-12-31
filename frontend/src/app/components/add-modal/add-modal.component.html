@@ -1,0 +1,39 @@
+<div class="modal fade" id="addcomp" tabindex="-1" aria-labelledby="addModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header text-center">
+          <h5 class="modal-title" id="addModalLabel">Add Component</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <form (ngSubmit)="onSubmit()">
+        <div class="modal-body">
+          
+            <div class="row mb-3">
+              <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Name</label>
+              <div class="col-sm-10">
+                <input type="text" [(ngModel)]="name" name="name" class="form-control form-control-sm" id="colFormLabelSm" placeholder="name of the component">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Image</label>
+              <div class="col-sm-10">
+                <input type="text" [(ngModel)]="image" name="image" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Image URL">
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="colFormLabelSm" class="col-sm-2 col-form-label col-form-label-sm">Description</label>
+              <div class="col-sm-10">
+                <input type="text" [(ngModel)]="desc" name="desc" class="form-control form-control-sm" id="colFormLabelSm" placeholder="Description of the component">
+              </div>
+            </div>
+          
+        </div>
+        <div class="modal-footer ">
+          <!-- <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button> -->
+          <button type="button" data-bs-dismiss="modal" aria-label="Close" class="btn btn-danger">cancel</button>
+          <button type="submit" class="btn btn-dark">Add</button>
+        </div>
+      </form>
+      </div>
+    </div>
+  </div>

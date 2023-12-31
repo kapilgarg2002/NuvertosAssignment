@@ -1,0 +1,23 @@
+<div class="container-fluid container ">
+    <div class="row">
+        <div class="col-4 ml-5" *ngFor="let post of POSTS | paginate:{
+            itemsPerPage: tableSize,
+            currentPage: page,
+            totalItems: count
+        }; let i=index ">
+        <div class="hover" routerLink="/compound/{{ post.id }}">
+            <app-card   [compound]="post"></app-card>
+        </div>
+            
+        </div>
+    </div>
+    
+</div>
+<div class="text-center">
+        
+    <pagination-controls
+    previousLabel="Prev"
+    nextLabel="Next"
+    (pageChange)="onTableDataChange($event)"
+    ></pagination-controls>
+</div>
