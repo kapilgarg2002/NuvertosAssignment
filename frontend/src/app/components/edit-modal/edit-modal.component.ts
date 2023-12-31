@@ -20,7 +20,12 @@ import { Compound } from '../../constants/type';
 
 export class EditModalComponent implements OnInit, OnDestroy {
 
-  @Input() compound: Compound;
+  @Input() compound: Compound={
+    id: 0,
+    name: '',
+    desc: '',
+    image: ''
+  };
 
   noChangesDetected: boolean = false;
   originalCompound: any; //new variable to hold the original values
