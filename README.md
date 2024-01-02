@@ -18,3 +18,5 @@
 ## edit compound
 ![image](https://github.com/kapilgarg2002/NuvertosAssignment/assets/72088348/82282f20-bac8-40f2-946e-665216a53c57)
 
+## not found page
+![image](https://github.com/kapilgarg2002/NuvertosAssignment/assets/72088348/9e93ddb2-d6d7-4a31-9368-ffd6de404944)
