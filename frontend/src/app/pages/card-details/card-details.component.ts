@@ -19,11 +19,9 @@ export class CardDetailsComponent {
 
 
   constructor(private activatedRoute:ActivatedRoute,private service: CompoundService,private router: Router ){}
-  closeDelModalFunc(){
-    const modaldiv = document.getElementById('delcomp');
-    if(modaldiv!=null){
-      modaldiv.addEventListener('hide.bs.modal',event=>{})
-    }
+   closeDelModalFunc(){
+    
+    //  window.location.reload();
   };
   ngOnInit():void{
     this.id = this.activatedRoute.snapshot.params['id'];

@@ -18,13 +18,14 @@ export class DelModalComponent {
     
   }
 
-  deleteCompoundFunc(){
+  async deleteCompoundFunc(){
     this.id = this.route.snapshot.params['id'];
     console.log(this.id);
     
-    this.closeAlertModalFunc();
+    
     this.compoundService.deleteCompound(this.id).subscribe(() => {
       this.router.navigate(['/compounds']);
-    }, error => console.log(error));
+    }, error => console.log(error))
+    this.closeAlertModalFunc();
   }
 }

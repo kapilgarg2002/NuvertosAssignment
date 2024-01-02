@@ -16,10 +16,10 @@ const BASE_URL = 'http://localhost:5000/api/compounds';
 export class CompoundService {
   constructor(private http:HttpClient) { }
 
-  getCompounds(): Observable<any> {
+  getCompounds(page:number): Observable<any> {
     // console.log(this.BASE_URL + '?pg=' + `${page}`);
     // console.log(this.http.get<CompoundResponse>(this.BASE_URL + '?pg=' + `${page}`));
-    return this.http.get(BASE_URL);
+    return this.http.get(BASE_URL + '?pg='+`${page}`);
   }
 
   getCompound(id:string): Observable<Compound> {

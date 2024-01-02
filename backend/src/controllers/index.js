@@ -14,8 +14,11 @@ const addCompound= async(req,res)=>{
 };
 const getAllCompounds= async(req,res)=>{
     try{
-        const Compounds = await compounds.findAll();
-        return res.json(Compounds)
+        const page = req.query.pg ? parseInt(req.query.pg) : 1;
+        const limit = 3;
+        const offset = (page - 1) * limit;
+        const Compounds = await compounds.findAndCountAll({offset,limit,order:[['id','ASC']],});
+        return res.status(200).json(Compounds)
     }catch(err){
         console.log(err);
         res.status(500).json(err);
