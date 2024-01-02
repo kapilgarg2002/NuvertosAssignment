@@ -15,6 +15,7 @@ import { AddModalComponent } from './components/add-modal/add-modal.component';
 import { CardDetailsComponent } from './pages/card-details/card-details.component';
 import { DelModalComponent } from './components/del-modal/del-modal.component';
 import { EditModalComponent } from './components/edit-modal/edit-modal.component';
+import { NotFoundPageComponent } from './pages/not-found-page/not-found-page.component';
 
 
 
@@ -28,7 +29,8 @@ import { EditModalComponent } from './components/edit-modal/edit-modal.component
     AddModalComponent,
     CardDetailsComponent,
     DelModalComponent,
-    EditModalComponent
+    EditModalComponent,
+    NotFoundPageComponent
   ],
   imports: [
     BrowserModule,
